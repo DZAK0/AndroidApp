@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".LoginActivity">
+
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar">
+    </include>
+
+    <EditText
+        android:id="@+id/EmailLogin"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/rounded_edittext"
+        android:padding="10dp"
+        android:textColor="@color/TextColor"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/LoginButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="@+id/PasswordLogin"
+        app:layout_constraintStart_toStartOf="@+id/PasswordLogin"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordLogin" />
+
+    <EditText
+        android:id="@+id/PasswordLogin"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:padding="10dp"
+        android:textColor="@color/TextColor"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/EmailLogin"
+        app:layout_constraintStart_toStartOf="@+id/EmailLogin"
+        app:layout_constraintTop_toBottomOf="@+id/EmailLogin" />
+
+    <TextView
+        android:id="@+id/ZarejestrujSieLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:onClick="PrzejdzDoRejestracji"
+        android:text="Nie masz konta? Zarejestruj sie!"
+        app:layout_constraintEnd_toEndOf="@+id/LoginButton"
+        app:layout_constraintStart_toStartOf="@+id/LoginButton"
+        app:layout_constraintTop_toBottomOf="@+id/LoginButton" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".LoginActivity">
+
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar">
+    </include>
+
+    <EditText
+        android:id="@+id/UsernameRegister"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_edittext"
+        android:padding="10dp"
+        android:ems="10"
+        android:hint="Username"
+        android:textColor="@color/TextColor"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <Button
+        android:id="@+id/ButtonRegister"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="Button"
+        android:background="@drawable/rounded_button"
+        app:layout_constraintEnd_toEndOf="@+id/PasswordRegister"
+        app:layout_constraintStart_toStartOf="@+id/PasswordRegister"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordRegister" />
+
+    <EditText
+        android:id="@+id/EmailRegister"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_edittext"
+        android:padding="10dp"
+        android:textColor="@color/TextColor"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/UsernameRegister"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/UsernameRegister"
+        app:layout_constraintTop_toBottomOf="@+id/UsernameRegister" />
+
+    <EditText
+        android:id="@+id/PasswordRegister"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_edittext"
+        android:padding="10dp"
+        android:ems="10"
+        android:hint="Password"
+        android:textColor="@color/TextColor"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/EmailRegister"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/EmailRegister"
+        app:layout_constraintTop_toBottomOf="@+id/EmailRegister" />
+
+    <TextView
+        android:id="@+id/WrocDoLogowania"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="Wroc do logowania"
+        app:layout_constraintEnd_toEndOf="@+id/ButtonRegister"
+        app:layout_constraintStart_toStartOf="@+id/ButtonRegister"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonRegister" />
+
+</android.support.constraint.ConstraintLayout>
