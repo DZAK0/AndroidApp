@@ -38,7 +38,6 @@ public class PrzegladajFiszkiActivity extends AppCompatActivity {
     private EditText TekstPoAngielsku;
     private TextView PoprawneTlumaczenie;
     private int i=0;
-    private int j=0;
     private String polski;
     private String angielski;
     private String wpisany;
@@ -107,12 +106,12 @@ public class PrzegladajFiszkiActivity extends AppCompatActivity {
             }
         });
 
-        NieWiem = (Button) findViewById(R.id.NieWiemButton);
+        NieWiem = (Button) findViewById(R.id.NieWiemButtonKoniec);
         Wiem = (Button) findViewById(R.id.WiemButton);
-        TekstPoPolsku = (TextView) findViewById(R.id.WyswietlTekstPoPolsku);
+        TekstPoPolsku = (TextView) findViewById(R.id.WyswietlTekstPoPolskuKoniec);
         TekstPoAngielsku = (EditText) findViewById(R.id.TextPoAngielskuEditText);
         PokazFiszkeButton = (Button) findViewById(R.id.PokazFiszkeButton);
-        PoprawneTlumaczenie = (TextView) findViewById(R.id.PoprawneTlumaczenie);
+        PoprawneTlumaczenie = (TextView) findViewById(R.id.PoprawneTlumaczenieKoniec);
 
 
         Wiem.setOnClickListener(new View.OnClickListener() {
@@ -126,11 +125,12 @@ public class PrzegladajFiszkiActivity extends AppCompatActivity {
                 else {
                     if (i >= fiszki.size()) {
                         GoHigher(sekcja,(i-1));
-                        i=1;
                         Dialog_Koniec();
                     }
-                    GoHigher(sekcja, (i-1));
-                    TekstPoPolsku.setText(fiszki.get(i).getFiszkaPL());
+                    else {
+                        GoHigher(sekcja, (i - 1));
+                        TekstPoPolsku.setText(fiszki.get(i).getFiszkaPL());
+                    }
                 }
             }
         });
@@ -159,18 +159,19 @@ public class PrzegladajFiszkiActivity extends AppCompatActivity {
         NieWiem.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                if((PoprawneTlumaczenie.equals("")&&(tlumaczenie.isEmpty())))
+                if((PoprawneTlumaczenie.equals("")||(tlumaczenie.isEmpty())))
                 {
                     Toast.makeText(PrzegladajFiszkiActivity.this, "Najpierw sprawdz slowko!", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     if (i >= fiszki.size()) {
-                        GoLower(sekcja, (i-1));
-                        i=1;
+                        GoLower(sekcja, (i - 1));
                         Dialog_Koniec();
                     }
-                    GoLower(sekcja, (i-1));
-                    TekstPoPolsku.setText(fiszki.get(i).getFiszkaPL());
+                    else {
+                        GoLower(sekcja, (i-1));
+                        TekstPoPolsku.setText(fiszki.get(i).getFiszkaPL());
+                    }
                 }
             }
         });
@@ -219,7 +220,12 @@ public class PrzegladajFiszkiActivity extends AppCompatActivity {
         dialogBuilder.setPositiveButton("Rozpocznij", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                TekstPoPolsku.setText(fiszki.get(0).getFiszkaPL());
+                if(fiszki.isEmpty()){
+                    Toast.makeText(PrzegladajFiszkiActivity.this, "Najpierw dodaj jakies fiszki!", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    TekstPoPolsku.setText(fiszki.get(0).getFiszkaPL());
+                }
             }
         });
         dialogBuilder.setNegativeButton("Wroc", new DialogInterface.OnClickListener() {

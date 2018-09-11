@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/TextPoAngielskuEdittext"
+        android:id="@+id/TextPoAngielskuEdittextKoniec"
         android:background="@drawable/rounded_edittext"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -46,22 +46,22 @@
         android:text="Fiszka po polsku"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextPoAngielskuEdittext"
+        app:layout_constraintTop_toBottomOf="@+id/TextPoAngielskuEdittextKoniec"
         android:textColor="@android:color/white"/>
 
     <TextView
-        android:id="@+id/WyswietlTekstPoPolsku"
+        android:id="@+id/WyswietlTekstPoPolskuKoniec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Kliknij dalej aby rozpoczac"
         android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="@+id/TextPoAngielskuEdittext"
-        app:layout_constraintStart_toStartOf="@+id/TextPoAngielskuEdittext"
+        app:layout_constraintEnd_toEndOf="@+id/TextPoAngielskuEdittextKoniec"
+        app:layout_constraintStart_toStartOf="@+id/TextPoAngielskuEdittextKoniec"
         app:layout_constraintTop_toBottomOf="@+id/FiszkaPoPolsku" />
 
     <TextView
-        android:id="@+id/PoprawneTlumaczenie"
+        android:id="@+id/PoprawneTlumaczenieKoniec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -71,7 +71,7 @@
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/WyswietlTekstPoPolsku" />
+        app:layout_constraintTop_toBottomOf="@+id/WyswietlTekstPoPolskuKoniec" />
 
     <TextView
         android:id="@+id/Tlumaczenie"
@@ -79,12 +79,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="@+id/WyswietlTekstPoPolsku"
-        app:layout_constraintStart_toStartOf="@+id/WyswietlTekstPoPolsku"
-        app:layout_constraintTop_toBottomOf="@+id/PoprawneTlumaczenie" />
+        app:layout_constraintEnd_toEndOf="@+id/WyswietlTekstPoPolskuKoniec"
+        app:layout_constraintStart_toStartOf="@+id/WyswietlTekstPoPolskuKoniec"
+        app:layout_constraintTop_toBottomOf="@+id/PoprawneTlumaczenieKoniec" />
 
     <Button
-        android:id="@+id/NieWiemButton"
+        android:id="@+id/NieWiemButtonKoniec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -95,7 +95,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/WiemButton"
+        android:id="@+id/WiemButtonKoniec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -106,7 +106,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/PokazButton"
+        android:id="@+id/PokazButtonKoniec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -118,7 +118,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/WiemButton"
         app:layout_constraintHorizontal_bias="0.804"
-        app:layout_constraintStart_toEndOf="@+id/NieWiemButton" />
+        app:layout_constraintStart_toEndOf="@+id/NieWiemButtonKoniec" />
 
 
 </android.support.constraint.ConstraintLayout>
