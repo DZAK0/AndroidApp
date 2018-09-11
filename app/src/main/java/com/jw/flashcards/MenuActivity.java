@@ -19,7 +19,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     private Button DodajFiszkebutton;
     private Button PrzegladajFiszki;
     private TextView HelloMenuText;
-    private Button WprowadzDaneOsobowe;
+    private Button ZakonczoneFiszki;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -40,11 +40,11 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         DodajFiszkebutton = (Button) findViewById(R.id.DodajFiszkeButton);
         PrzegladajFiszki = (Button) findViewById(R.id.PrzegladajFiszkiButton);
         HelloMenuText = (TextView) findViewById(R.id.HelloMenuText);
-        WprowadzDaneOsobowe = (Button) findViewById(R.id.WprowadzDaneOsobowe);
+        ZakonczoneFiszki = (Button) findViewById(R.id.ZakonczoneFiszki);
 
         HelloMenuText.setText("Hello "+user.getEmail());
 
-        WprowadzDaneOsobowe.setOnClickListener(this);
+        ZakonczoneFiszki.setOnClickListener(this);
         DodajFiszkebutton.setOnClickListener(this);
         PrzegladajFiszki.setOnClickListener(this);
         LogoutButtonMenu.setOnClickListener(this);
@@ -68,9 +68,10 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         {
             startActivity(new Intent(MenuActivity.this, DodajFiszkeActivity.class));
         }
-        if(view == WprowadzDaneOsobowe)
+        if(view == ZakonczoneFiszki)
         {
-            startActivity(new Intent(MenuActivity.this, SekcjaActivity.class));
+            Intent i = new Intent(this, ZakonczoneFiszkiActivity.class);
+            startActivity(i);
         }
         if(view == PrzegladajFiszki)
         {

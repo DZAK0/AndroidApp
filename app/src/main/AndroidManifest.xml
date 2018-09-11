@@ -16,18 +16,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity"></activity>
-        <activity android:name=".RegisterActivity"></activity>
-        <activity android:name=".DodajFiszkeActivity"
-            android:parentActivityName=".MenuActivity">
-        </activity>
-        <activity android:name=".SekcjaActivity"></activity>
-        <activity android:name=".PrzegladajFiszkiActivity"
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity
+            android:name=".DodajFiszkeActivity"
+            android:parentActivityName=".MenuActivity"></activity>
+        <activity android:name=".SekcjaActivity" />
+        <activity
+            android:name=".PrzegladajFiszkiActivity"
             android:label="Wroc"
-            android:parentActivityName=".SekcjaActivity">
-
-        </activity>
-
+            android:parentActivityName=".SekcjaActivity"></activity>
+        <activity android:name=".ZakonczoneFiszkiActivity"
+            android:parentActivityName=".MenuActivity"></activity>
     </application>
 
 </manifest>

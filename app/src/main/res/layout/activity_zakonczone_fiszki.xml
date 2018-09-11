@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar">
+    </include>
+
+    <TextView
+        android:id="@+id/PodajTlumaczenie"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="100dp"
+        android:text="Podaj Tlumaczenie"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/TextPoAngielskuEdittext"
+        android:background="@drawable/rounded_edittext"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PodajTlumaczenie" />
+
+    <TextView
+        android:id="@+id/FiszkaPoPolsku"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="20dp"
+        android:text="Fiszka po polsku"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextPoAngielskuEdittext"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/WyswietlTekstPoPolsku"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Kliknij dalej aby rozpoczac"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/TextPoAngielskuEdittext"
+        app:layout_constraintStart_toStartOf="@+id/TextPoAngielskuEdittext"
+        app:layout_constraintTop_toBottomOf="@+id/FiszkaPoPolsku" />
+
+    <TextView
+        android:id="@+id/PoprawneTlumaczenie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Poprawne tlumaczenie"
+        app:layout_goneMarginTop="24dp"
+        android:lines="7"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WyswietlTekstPoPolsku" />
+
+    <TextView
+        android:id="@+id/Tlumaczenie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@+id/WyswietlTekstPoPolsku"
+        app:layout_constraintStart_toStartOf="@+id/WyswietlTekstPoPolsku"
+        app:layout_constraintTop_toBottomOf="@+id/PoprawneTlumaczenie" />
+
+    <Button
+        android:id="@+id/NieWiemButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:text="Nie wiem"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/WiemButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Wiem"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/PokazButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginStart="50dp"
+        android:text="Pokaz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/WiemButton"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintStart_toEndOf="@+id/NieWiemButton" />
+
+
+</android.support.constraint.ConstraintLayout>

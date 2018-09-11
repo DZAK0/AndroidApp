@@ -100,7 +100,6 @@ public class PrzegladajFiszkiActivity extends AppCompatActivity {
                 showData(dataSnapshot);
                 pd.dismiss();
                 Dialog();
-                //Log.d("TESTVALUE", "jakas wartosc?? "+dataSnapshot.getValue());
             }
 
             @Override
