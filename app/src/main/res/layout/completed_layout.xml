@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginTop="100dp"
-        android:text="Podaj Tlumaczenie"
+        android:text="@string/enterAnswer"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="22dp"
         android:layout_marginTop="20dp"
-        android:text="Fiszka po polsku"
+        android:text="@string/Question"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextPoAngielskuEdittextKoniec"
@@ -54,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Kliknij dalej aby rozpoczac"
+        android:text="@string/pressNext"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="@+id/TextPoAngielskuEdittextKoniec"
         app:layout_constraintStart_toStartOf="@+id/TextPoAngielskuEdittextKoniec"
@@ -65,7 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Poprawne tlumaczenie"
+        android:text="@string/correctAsnwer"
         app:layout_goneMarginTop="24dp"
         android:lines="7"
         android:textColor="@android:color/white"
@@ -84,28 +84,31 @@
         app:layout_constraintTop_toBottomOf="@+id/PoprawneTlumaczenieKoniec" />
 
     <Button
+        android:background="@drawable/rounded_button"
         android:id="@+id/NieWiemButtonKoniec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
-        android:text="Nie wiem"
+        android:text="@string/dontKnow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
+        android:background="@drawable/rounded_button"
         android:id="@+id/WiemButtonKoniec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:text="Wiem"
+        android:text="@string/iknow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
+        android:background="@drawable/rounded_button"
         android:id="@+id/PokazButtonKoniec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -114,7 +117,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:layout_marginStart="50dp"
-        android:text="Pokaz"
+        android:text="@string/show"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/WiemButton"
         app:layout_constraintHorizontal_bias="0.804"

@@ -26,7 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText EmailRegister;
     private Button RegisterButton;
     private FirebaseAuth mAuth;
-    private TextView WrocDoLogowania;
+    private TextView goBackToLogin;
     private String login;
     private String password;
     private String email;
@@ -42,7 +42,7 @@ public class RegisterActivity extends AppCompatActivity {
         PasswordRegister = (EditText) findViewById(R.id.PasswordRegister);
         EmailRegister = (EditText) findViewById(R.id.EmailRegister);
         RegisterButton = (Button) findViewById(R.id.ButtonRegister);
-        WrocDoLogowania = (TextView) findViewById(R.id.WrocDoLogowania);
+        goBackToLogin = (TextView) findViewById(R.id.WrocDoLogowania);
         mAuth = FirebaseAuth.getInstance();
 
         if(mAuth.getCurrentUser() != null)
@@ -59,7 +59,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        WrocDoLogowania.setOnClickListener(new View.OnClickListener() {
+        goBackToLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
@@ -77,12 +77,12 @@ public class RegisterActivity extends AppCompatActivity {
 
         if (email.isEmpty())
         {
-            Toast.makeText(this, "Please enter email!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.enterEmailToast, Toast.LENGTH_SHORT).show();
             return;
         }
         else if (password.isEmpty())
         {
-            Toast.makeText(this, "Please enter password!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.enterPasswordToast, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -98,7 +98,7 @@ public class RegisterActivity extends AppCompatActivity {
                         }
                         else
                         {
-                            Toast.makeText(RegisterActivity.this, "Your registration wasn't successful, please try again", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, R.string.errorRegisterToast, Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -106,10 +106,10 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void SetUserOnDatabase()
     {
-        User uzytkownik = new User(login, password, email, "Fiszki");
+        User userName = new User(login, password, email, "Fiszki");
         mDatabase = FirebaseDatabase.getInstance().getReference();
         FirebaseUser user = mAuth.getCurrentUser();
         String userID = user.getUid();
-        mDatabase.child("users").child(userID).setValue(uzytkownik);
+        mDatabase.child("users").child(userID).setValue(userName);
     }
 }

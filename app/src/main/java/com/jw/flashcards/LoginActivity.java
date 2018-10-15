@@ -24,7 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText EmailLogin;
     private EditText PasswrodLogin;
     private Button LoginButton;
-    private TextView ZarejestrujSieLogin;
+    private TextView registerLogin;
     private ProgressDialog progressDialog;
     private FirebaseAuth mAuth;
 
@@ -37,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         EmailLogin = (EditText) findViewById(R.id.EmailLogin);
         PasswrodLogin = (EditText) findViewById(R.id.PasswordLogin);
-        ZarejestrujSieLogin = (TextView) findViewById(R.id.ZarejestrujSieLogin);
+        registerLogin = (TextView) findViewById(R.id.ZarejestrujSieLogin);
         LoginButton = (Button) findViewById(R.id.LoginButton);
         mAuth = FirebaseAuth.getInstance();
 
@@ -56,7 +56,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        ZarejestrujSieLogin.setOnClickListener(new View.OnClickListener() {
+        registerLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
@@ -72,16 +72,16 @@ public class LoginActivity extends AppCompatActivity {
 
         if (email.isEmpty())
         {
-            Toast.makeText(this, "Please enter email!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.enterEmailToast, Toast.LENGTH_SHORT).show();
             return;
         }
         else if (password.isEmpty())
         {
-            Toast.makeText(this, "Please enter password!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.enterPasswordToast, Toast.LENGTH_SHORT).show();
             return;
         }
 
-        progressDialog.setMessage("Please Wait");
+        progressDialog.setMessage(getString(R.string.pdWaitMessage));
         progressDialog.show();
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -97,7 +97,7 @@ public class LoginActivity extends AppCompatActivity {
                         }
                         else
                         {
-                            Toast.makeText(getApplicationContext(), "Uzytkownik o podanych dancyh nie istnieje!", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), R.string.doesntExistToast, Toast.LENGTH_LONG).show();
                         }
                     }
                 });

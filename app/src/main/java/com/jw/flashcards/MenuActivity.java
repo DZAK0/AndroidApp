@@ -16,15 +16,14 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
 
     private FirebaseAuth mAuth;
     private Button LogoutButtonMenu;
-    private Button DodajFiszkebutton;
-    private Button PrzegladajFiszki;
-    private TextView HelloMenuText;
-    private Button ZakonczoneFiszki;
+    private Button addFlashcardButton;
+    private Button viewFlashcards;
+    private Button endedFlashcards;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menu);
+        setContentView(R.layout.menu_layout);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -37,22 +36,21 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         FirebaseUser user = mAuth.getCurrentUser();
 
         LogoutButtonMenu = (Button) findViewById(R.id.WrocDoMenuSekcje);
-        DodajFiszkebutton = (Button) findViewById(R.id.DodajFiszkeButton);
-        PrzegladajFiszki = (Button) findViewById(R.id.PrzegladajFiszkiButton);
-        HelloMenuText = (TextView) findViewById(R.id.HelloMenuText);
-        ZakonczoneFiszki = (Button) findViewById(R.id.ZakonczoneFiszki);
+        addFlashcardButton = (Button) findViewById(R.id.DodajFiszkeButton);
+        viewFlashcards = (Button) findViewById(R.id.PrzegladajFiszkiButton);
+        TextView helloMenuText = (TextView) findViewById(R.id.HelloMenuText);
+        endedFlashcards = (Button) findViewById(R.id.ZakonczoneFiszki);
 
-        HelloMenuText.setText("Hello "+user.getEmail());
 
-        ZakonczoneFiszki.setOnClickListener(this);
-        DodajFiszkebutton.setOnClickListener(this);
-        PrzegladajFiszki.setOnClickListener(this);
+        endedFlashcards.setOnClickListener(this);
+        addFlashcardButton.setOnClickListener(this);
+        viewFlashcards.setOnClickListener(this);
         LogoutButtonMenu.setOnClickListener(this);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar ab = getSupportActionBar();
-        ab.setTitle("Aplikacja");
+        ab.setTitle(R.string.app);
 
     }
 
@@ -64,18 +62,18 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
             finish();
             startActivity(new Intent(MenuActivity.this, LoginActivity.class));
         }
-        if(view == DodajFiszkebutton)
+        if(view == addFlashcardButton)
         {
-            startActivity(new Intent(MenuActivity.this, DodajFiszkeActivity.class));
+            startActivity(new Intent(MenuActivity.this, AddFlashcardActivity.class));
         }
-        if(view == ZakonczoneFiszki)
+        if(view == endedFlashcards)
         {
-            Intent i = new Intent(this, ZakonczoneFiszkiActivity.class);
+            Intent i = new Intent(this, FinishedFlashcardActivity.class);
             startActivity(i);
         }
-        if(view == PrzegladajFiszki)
+        if(view == viewFlashcards)
         {
-            startActivity(new Intent(MenuActivity.this, SekcjaActivity.class));
+            startActivity(new Intent(MenuActivity.this, SectionActivity.class));
         }
 
     }

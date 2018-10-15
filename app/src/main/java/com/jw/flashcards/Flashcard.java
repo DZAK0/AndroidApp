@@ -2,31 +2,31 @@ package com.jw.flashcards;
 
 public class Flashcard {
 
-    private String FiszkaPL;
-    private String FiszkaENG;
+    private String flashcardAnswer;
+    private String flashcardQuestion;
 
     public Flashcard() {
     }
 
     public Flashcard(String FiszkaPL, String FiszkaENG)
     {
-        this.FiszkaPL = FiszkaPL;
-        this.FiszkaENG = FiszkaENG;
+        this.flashcardAnswer = FiszkaPL;
+        this.flashcardQuestion = FiszkaENG;
     }
 
     public String getFiszkaPL() {
-        return String.valueOf(FiszkaPL);
+        return String.valueOf(flashcardAnswer);
     }
 
     public void setFiszkaPL(String fiszkaPL) {
-        FiszkaPL = fiszkaPL;
+        flashcardAnswer = fiszkaPL;
     }
 
     public String getFiszkaENG() {
-        return FiszkaENG;
+        return flashcardQuestion;
     }
 
     public void setFiszkaENG(String fiszkaENG) {
-        FiszkaENG = fiszkaENG;
+        flashcardQuestion = fiszkaENG;
     }
 }

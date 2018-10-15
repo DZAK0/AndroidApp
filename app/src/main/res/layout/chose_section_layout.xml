@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
@@ -16,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginTop="20dp"
-        android:text="Podaj tlumaczenie"
+        android:text="@string/enterAnswer"
         android:textColor="@android:color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="22dp"
         android:layout_marginTop="20dp"
-        android:text="Fiszka po polsku"
+        android:text="@string/Question"
         android:textColor="@android:color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:lines="7"
-        android:text="Klinik dalej aby rozpoczac"
+        android:text="@string/pressNext"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="@+id/TextPoAngielskuEditText"
@@ -79,7 +78,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/rounded_button"
-        android:text="Wiem"
+        android:text="@string/iknow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -93,7 +92,7 @@
         android:layout_marginRight="50dp"
         android:layout_marginStart="50dp"
         android:background="@drawable/rounded_button"
-        android:text="POKAZ"
+        android:text="@string/show"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/WiemButton"
         app:layout_constraintStart_toEndOf="@+id/NieWiemButtonKoniec" />
@@ -119,7 +118,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:textColor="@android:color/white"
-        android:text="Poprawne tlumaczenie "
+        android:text="@string/correctAsnwer"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -133,7 +132,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginStart="10dp"
         android:background="@drawable/rounded_button"
-        android:text="Nie Wiem"
+        android:text="@string/dontKnow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

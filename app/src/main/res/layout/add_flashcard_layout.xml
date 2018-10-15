@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
@@ -18,9 +17,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:scrollHorizontally="false"
-        android:text="Wpisz tekst po polsku"
+        android:text="@string/question"
         android:textColor="@android:color/white"
-        android:textSize="15dp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
@@ -49,8 +48,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="Wpisz tekst po Angielsku"
-        android:textSize="15dp"
+        android:text="@string/asnwer"
+        android:textSize="15sp"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,7 +83,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/rounded_button"
-        android:text="Wroc"
+        android:text="@string/goBack"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/FiszkaPoAngielsku" />
@@ -98,7 +97,7 @@
         android:layout_marginRight="15dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/rounded_button"
-        android:text="Dodaj"
+        android:text="@string/addFlashcard"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/FiszkaPoAngielsku" />
